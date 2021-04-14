@@ -12,7 +12,8 @@
  */
 
 function trancate(string, maxLength) {
-    if (typeof string !== 'string' || isNaN(maxLength)) {
+    if (typeof string !== 'string' ||
+        (isNaN(maxLength) || typeof maxLength === 'string')) {
         return null;
     }
 

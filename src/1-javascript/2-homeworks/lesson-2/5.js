@@ -11,6 +11,10 @@
  */
 
 function createArray(item, repeat) {
+    if(isNaN(repeat) || typeof repeat === 'string') {
+        throw new Error(`"${repeat}" is not a number`);
+    }
+
     if (!isNaN(item)
         || typeof item === 'string'
         || typeof item === 'object'
@@ -25,6 +29,6 @@ function createArray(item, repeat) {
     throw new Error(`"${typeof item}" is not supported type`);
 }
 
-const result = createArray('x', 5);
+const result = createArray('x', '5');
 
 console.log(result); // [ x, x, x, x, x ]
