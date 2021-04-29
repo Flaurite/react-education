@@ -1,18 +1,13 @@
 {
-    "parserOptions": {
-        "project": "./tsconfig.json"
-    },
     "extends": [
         "react-app",
-        "react-app/jest",
-        "airbnb-typescript"
+        "react-app/jest"
     ],
     "rules": {
         "react-hooks/exhaustive-deps": "off",
         "no-template-curly-in-string": "off",
         "jsx-a11y/anchor-is-valid": "off",
-        "indent": "off",
-        "@typescript-eslint/indent": ["error", 4],
-        "react/react-in-jsx-scope": "off"
+        "quotes": ["error", "single"],
+        "jsx-quotes": ["error", "prefer-single"]
     }
 }

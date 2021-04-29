@@ -2,7 +2,6 @@
 import { render } from 'react-dom';
 
 /* Components */
-
 /* Instruments */
 import './theme/main.scss';
 
