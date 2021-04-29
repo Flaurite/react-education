@@ -7,7 +7,3 @@ import { render } from 'react-dom';
 import './theme/main.scss';
 
 render(<h1>Типсы и Триксы</h1>, document.getElementById('root'));
-
-const obj = {
-    name: 'John',
-};
