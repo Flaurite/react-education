@@ -1,4 +1,4 @@
-import { Nav, Hero, TipJsVar } from '../components';
+import { Nav, Hero, TipList } from '../components';
 import { icons } from '../theme/icons/tag';
 
 export const HomePage = () => {
@@ -6,12 +6,7 @@ export const HomePage = () => {
         <section className='layout'>
             <Nav />
             <Hero />
-            <div className='tip-list'>
-                <TipJsVar />
-                <TipJsVar />
-                <TipJsVar />
-                <TipJsVar />
-            </div>
+            <TipList />
         </section>
     );
 }

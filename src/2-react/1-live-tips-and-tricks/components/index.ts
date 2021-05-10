@@ -1,3 +1,3 @@
-export { Nav } from './Nav'
-export { Hero } from './Hero'
-export { TipJsVar } from './TipJsVar'
+export { Nav } from './Nav';
+export { Hero } from './Hero';
+export { TipList } from './TipList';
