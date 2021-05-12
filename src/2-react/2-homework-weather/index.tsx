@@ -2,7 +2,7 @@
 import { render } from 'react-dom';
 
 /* Components */
-import { App } from './App';
+import { App } from './components';
 
 /* Instruments */
 import './theme/index.scss';
