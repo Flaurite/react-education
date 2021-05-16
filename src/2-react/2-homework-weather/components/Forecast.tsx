@@ -1,34 +1,21 @@
+import forecastJson from '../mock-data/forecast.json'
+
+import { Day } from '../components'
+
+import { ForecastModel } from '../model/ForecastModel'
+
 export const Forecast: React.FC = () => {
+    const forecastData: ForecastModel[] = forecastJson
+        ?.map((forecast): ForecastModel => { return forecast; })
+        .slice(1, 8);
+
+    const forecastsJSX = forecastData?.map((forecast) => {
+        return <Day {...forecast}/>;
+    });
+
     return (
         <div className='forecast'>
-            <div className='day sunny selected'>
-                <p>Четверг</p>
-                <span>25</span>
-            </div>
-            <div className='day cloudy'>
-                <p>Пятница</p>
-                <span>21</span>
-            </div>
-            <div className='day sunny'>
-                <p>Суббота</p>
-                <span>22</span>
-            </div>
-            <div className='day sunny'>
-                <p>Воскресенье</p>
-                <span>24</span>
-            </div>
-            <div className='day rainy'>
-                <p>Понедельник</p>
-                <span>23</span>
-            </div>
-            <div className='day cloudy'>
-                <p>Вторник</p>
-                <span>19</span>
-            </div>
-            <div className='day sunny'>
-                <p>Среда</p>
-                <span>22</span>
-            </div>
+            {forecastsJSX}
         </div>
     );
 }
