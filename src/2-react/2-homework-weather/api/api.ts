@@ -1,12 +1,17 @@
 /* Core */
-import waait from 'waait';
+import { ForecastModel } from '../model/ForecastModel'
+import axios from 'axios';
+import { FetchForecastResultModel } from '../model/FetchForecastResultModel';
 
-const WEATHER_API_URL = process.env.REACT_APP_WEATHER_API_URL;
+const REST_API_URL = process.env.REACT_APP_REST_API_URL;
 
-export const api = {
-    async getWeather() {
-        await waait(1000);
+export const restApi: IApi = {
+    getForecast: async (): Promise<FetchForecastResultModel> => {
+        const response = await axios.get(`${REST_API_URL}/forecast`);
+        return response.data;
+    }
+}
 
-        return fetch(`${WEATHER_API_URL}`, { method: 'GET' });
-    },
-};
+interface IApi {
+    getForecast(): Promise<FetchForecastResultModel>;
+}

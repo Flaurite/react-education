@@ -1,16 +1,16 @@
-import forecastJson from '../mock-data/forecast.json'
-
 import { Day } from '../components'
 
 import { ForecastModel } from '../model/ForecastModel'
+import { FetchForecastResultModel } from '../model/FetchForecastResultModel'
+import * as hooks from '../hooks/react-query'
 
 export const Forecast: React.FC = () => {
-    const forecastData: ForecastModel[] = forecastJson
-        ?.map((forecast): ForecastModel => { return forecast; })
-        .slice(1, 8);
+    const useFetchForecast = hooks.useFetchForecast();
 
-    const forecastsJSX = forecastData?.map((forecast) => {
-        return <Day {...forecast}/>;
+    const week = useFetchForecast.data?.data?.slice(1, 8);
+
+    const forecastsJSX = week?.map((forecast) => {
+        return <Day {...forecast} />;
     });
 
     return (
