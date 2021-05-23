@@ -6,7 +6,6 @@ function getDay(date: number): number {
 
 export const dateUtility: DateUtility = {
     getDayName: (date: number): string => {
-        console.log(new Date(date).toDateString());
         return days[getDay(date)];
     }
 

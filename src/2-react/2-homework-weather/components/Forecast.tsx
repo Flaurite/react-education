@@ -10,7 +10,7 @@ export const Forecast: React.FC = () => {
     const week = useFetchForecast.data?.data?.slice(1, 8);
 
     const forecastsJSX = week?.map((forecast) => {
-        return <Day {...forecast} />;
+        return <Day key={forecast.id} {...forecast} />;
     });
 
     return (

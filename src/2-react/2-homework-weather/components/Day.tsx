@@ -16,7 +16,7 @@ export const Day: React.FC<ForecastModel> = (props) => {
     };
 
     return (
-        <div key={props.id} className={className} onClick={onClick}>
+        <div className={className} onClick={onClick}>
             <p>{dateUtility.getDayName(props.day)}</p>
             <span>{props.temperature}</span>
         </div>

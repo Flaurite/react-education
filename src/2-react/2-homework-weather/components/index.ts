@@ -1,6 +1,6 @@
 export { App } from './App'
 export { Head } from './Head'
 export { CurrentWeather } from './CurrentWeather'
-export { Filter } from './Filter'
+export { Filter } from './form'
 export { Forecast } from './Forecast'
 export { Day } from './Day'
